@@ -1,3 +1,15 @@
+window.addEventListener('load', () => {
+    const senhaCorreta = "894";
+    const senhaUsuario = prompt("Por favor, digite sua senha numérica de 4 dígitos:");
+
+    if (senhaUsuario === senhaCorreta) {
+        document.getElementById('main-container').style.display = 'block';
+    } else {
+        alert("Senha incorreta. Por favor, recarregue a página e tente novamente.");
+    }
+});
+
+
 document.getElementById('calcular').addEventListener('click', calcularPrecos);
 
 function formatarPrecos(precos) {
@@ -55,3 +67,15 @@ function calcularPrecos() {
                                               "*Festas Premium*\n" +
                                               formatarPrecos(premium);
 }
+
+function copiarTexto() {
+    const textArea = document.getElementById('result');
+    textArea.select();
+    textArea.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+    document.execCommand('copy');
+    alert('Texto copiado para a área de transferência');
+}
+document.getElementById('copiar').addEventListener('click', copiarTexto);
+
+    
