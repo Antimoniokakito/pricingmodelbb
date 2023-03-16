@@ -55,10 +55,9 @@ button {
     border: none;
     cursor: pointer;
     flex-grow: 1;
-    margin-right: 5px;
     margin-bottom: 5px;
     border-radius: 4px;
-    flex-basis: calc(50% - 5px);
+    flex-basis: calc(50% - 2.5px);
 }
 
 button:last-child {
@@ -85,5 +84,10 @@ textarea {
 
     input[type=number], button {
         font-size: 12px;
+    }
+
+    button {
+        margin-bottom: 0;
+        flex-basis: 100%;
     }
 }
