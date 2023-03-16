@@ -10,12 +10,14 @@ body {
 }
 
 .container {
-    width: 550px;
+    max-width: 550px;
+    width: 100%;
     background-color: white;
     border: 1px solid #ccc;
     padding: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -42,6 +44,7 @@ input[type=number] {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -53,7 +56,9 @@ button {
     cursor: pointer;
     flex-grow: 1;
     margin-right: 5px;
+    margin-bottom: 5px;
     border-radius: 4px;
+    flex-basis: calc(50% - 5px);
 }
 
 button:last-child {
@@ -71,4 +76,14 @@ textarea {
     padding: 5px;
     font-size: 14px;
     box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    input[type=number], button {
+        font-size: 12px;
+    }
 }
