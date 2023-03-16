@@ -1,8 +1,8 @@
 window.addEventListener('load', () => {
-    const senhaCorreta = "894";
-    const senhaUsuario = prompt("Por favor, digite sua senha numérica:");
+    const s1 = "894";
+    const s2 = prompt("Por favor, digite sua senha numérica:");
 
-    if (senhaUsuario === senhaCorreta) {
+    if (s2 === s1) {
         document.getElementById('main-container').style.display = 'block';
     } else {
         alert("Senha incorreta. Por favor, recarregue a página e tente novamente.");
