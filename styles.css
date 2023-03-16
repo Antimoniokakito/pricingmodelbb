@@ -54,14 +54,13 @@ button {
     padding: 5px 10px;
     border: none;
     cursor: pointer;
-    flex-grow: 1;
     margin-bottom: 5px;
     border-radius: 4px;
-    flex-basis: calc(50% - 2.5px);
+    flex: 1;
 }
 
-button:last-child {
-    margin-right: 0;
+button:not(:last-child) {
+    margin-right: 5px;
 }
 
 button:hover {
@@ -84,10 +83,5 @@ textarea {
 
     input[type=number], button {
         font-size: 12px;
-    }
-
-    button {
-        margin-bottom: 0;
-        flex-basis: 100%;
     }
 }
