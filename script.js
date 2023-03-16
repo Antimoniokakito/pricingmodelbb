@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const senhaCorreta = "894";
-    const senhaUsuario = prompt("Por favor, digite sua senha numérica de 4 dígitos:");
+    const senhaUsuario = prompt("Por favor, digite sua senha numérica:");
 
     if (senhaUsuario === senhaCorreta) {
         document.getElementById('main-container').style.display = 'block';
