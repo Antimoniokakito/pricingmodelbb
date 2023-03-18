@@ -39,7 +39,7 @@ function calcularPrecos2023_1() {
 
     const formigueiro1 = 12 * 389.9 + (adultoMin - 25) * 74.9 + (criancaMin - 10) * 48.9;
     const formigueiro2 = 12 * 449.9 + (adultoMin - 25) * 84.9 + (criancaMin - 10) * 52.9;
-    const formigueiro3 = 12 * 499.9 + (adultoMin - 25) * 94.9 + (criancaMin - 10) * 56.9;
+    const formigueiro3 = 12 * 495.9 + (adultoMin - 25) * 94.9 + (criancaMin - 10) * 56.9;
 
     const BalaBalao = 12 * 825.9 + (adultoMin - 25) * 159.9 + (criancaMin - 10) * 78.9;
     const Premier = 12 * 1225.9 + (adultoMin - 25) * 209.9 + (criancaMin - 10) * 82.9;
