@@ -1,129 +1,157 @@
-  /* Aba Preços */
-        #precos {
-            max-width: 550px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-        #precos h1 {
-            margin-top: 0;
-            text-align: center;
-            font-size: 1.5em;
-            color: #333;
-            margin-bottom: 20px;
-        }
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
 
-        #precos label, #precos input {
-            display: block;
-            margin-bottom: 10px;
-        }
+/* Aba Preços */
+#precos {
+    max-width: 550px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        #precos input[type=number] {
-            padding: 5px;
-            font-size: 14px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+#precos h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 30px;
+}
 
-        #precos .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 15px;
-        }
+#precos label, #precos input {
+    display: block;
+    margin-bottom: 15px;
+}
 
-        #precos button {
-            font-weight: bold;
-            background-color: cornflowerblue;
-            color: white;
-            padding: 10px 50px;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            width: 100%;
-            max-width: 300px;
-            text-align: center;
-        }
+#precos input[type=number] {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-        #precos button:hover {
-            background-color: royalblue;
-        }
+#precos .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-        #precos textarea {
-            width: 100%;
-            height: 150px;
-            resize: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 10px;
-            font-size: 14px;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-            background-color: #f6f6f6;
-            transition: border-color 0.transition: border-color 0.3s;
-        }
+#precos button {
+    font-weight: bold;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 12px 50px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 16px;
+}
 
-        #precos textarea:focus {
-            outline: none;
-            border-color: cornflowerblue;
-        }
+#precos button:hover {
+    background-color: royalblue;
+}
 
-        /* Aba Mensagem Personalizada */
-        #mensagem {
-            max-width: 550px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+#precos textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f6f6f6;
+    transition: border-color 0.3s;
+}
 
-        #mensagem h1 {
-            text-align: center;
-            font-size: 1.5em;
-            color: #333;
-            margin-bottom: 20px;
-        }
+#precos textarea:focus {
+    outline: none;
+    border-color: cornflowerblue;
+}
 
-        #mensagem label, #mensagem input, #mensagem textarea {
-            display: block;
-            margin-bottom: 10px;
-        }
+/* Aba Mensagem Personalizada */
+#mensagem {
+    max-width: 550px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        #mensagem input, #mensagem textarea {
-            padding: 5px;
-            font-size: 14px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+#mensagem h1 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 30px;
+}
 
-        #mensagem button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            margin: 20px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            border-radius: 4px;
-        }
+#mensagem label, #mensagem input, #mensagem textarea {
+    display: block;
+    margin-bottom: 15px;
+}
 
-        #mensagem button:hover {
-            background-color: #43A047;
-        }
+#mensagem input, #mensagem textarea {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-        #mensagem textarea {
-            height: 200px;
-        }
+#mensagem button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  
+  font-size: 16px;
+border-radius: 4px;
+}
 
-        /* Media Query */
-        @media (max-width: 480px) {
-            #precos h1, #mensagem h1 {
-                font-size: 1.2em;
-            }
+#mensagem button:hover {
+background-color: #43A047;
+}
 
-            #precos input[type=number], #precos button,
-            #mensagem input, #mensagem button {
-                font-size: 12px;
-            }
-        }
+#mensagem textarea {
+height: 200px;
+}
+
+/* Media Query */
+@media (max-width: 480px) {
+#precos h1, #mensagem h1 {
+font-size: 1.5em;
+}
+  
+#precos input[type=number], #precos button,
+#mensagem input, #mensagem button {
+    font-size: 14px;
+}
+
+#precos button, #mensagem button {
+    padding: 10px 40px;
+}
