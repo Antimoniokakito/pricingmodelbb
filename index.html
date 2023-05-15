@@ -1,123 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa de Preços Bala Balão</title>
     <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: cornflowerblue;
+            cursor: pointer;
+        }
+        
+        nav a:hover {
+            color: royalblue;
+        }
+        
+        .tab {
+            display: none;
+        }
+        
+        .tab.active {
+            display: block;
+        }
 
-.container {
-    max-width: 550px;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-h1 {
-    margin-top: 0;
-    text-align: center;
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-label, input {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input[type=number] {
-    padding: 5px;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-button {
-    font-weight: bold;
-    background-color: cornflowerblue;
-    color: white;
-    padding: 10px 50px;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-}
-
-button:hover {
-    background-color: royalblue;
-}
-
-textarea {
-    width: 100%;
-    height: 150px;
-    resize: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 14px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    background-color: #f6f6f6;
-    transition: border-color 0.3s;
-}
-
-textarea:focus {
-    outline: none;
-    border-color: cornflowerblue;
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.2em;
-    }
-
-    input[type=number], button {
-        font-size: 12px;
-    }
-}
+        /* ... restante do CSS ... */
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Programa de Preços Bala Balão</h1>
-        <label for="adultos">Número de Adultos:</label>
-        <input type="number" id="adultos" min="0">
-        <label for="criancas">Número de Crianças:</label>
-        <input type="number" id="criancas" min="0">
+        <nav>
+            <a onclick="changeTab('precos')">Programa de Preços</a>
+            <a onclick="changeTab('mensagem')">Mensagem Personalizada</a>
+        </nav>
         
-        <div class="button-container">
-            <button id="calcular2023_1">2023.1</button>
-            <button id="calcular2023_2">2023.2</button>
-            <button id="copiar">Copiar</button>
+        <div id="precos" class="tab active">
+            <h1>Programa de Preços Bala Balão</h1>
+            <label for="adultos">Número de Adultos:</label>
+            <input type="number" id="adultos" min="0">
+            <label for="criancas">Número de Crianças:</label>
+            <input type="number" id="criancas" min="0">
+            
+            <div class="button-container">
+                <button id="calcular2023_1">2023.1</button>
+                <button id="calcular2023_2">2023.2</button>
+                <button id="copiar">Copiar</button>
+            </div>
+            <textarea id="result" readonly></textarea>
         </div>
-        <textarea id="result" readonly></textarea>
+        
+        <div id="mensagem" class="tab">
+            <h1>Bala Balão - Mensagem Personalizada</h1>
+            <form id="mensagem-form">
+                <label for="nome_cliente">Nome do Cliente:</label>
+                <input type="text" id="nome_cliente">
+                
+                <label for="data_festa">Data da Festa:</label>
+                <input type="date" id="data_festa">
+                
+                <label for="horario_inicio">Horário de Início:</label>
+                <input type="time" id="horario_inicio">
+                
+                <label for="horario_fim">Horário de Término:</label>
+                <input type="time" id="horario_fim">
+                
+                <button type="button" onclick="gerarMensagem()">Gerar Mensagem</button>
+                <button type="button" onclick="CopiarMensagem()">Copiar Mensagem</button> 
+            </form>
+                   <h2>Mensagem:</h2>
+            <textarea id="mensagem_textarea" readonly></textarea>
+        </div>
     </div>
-    <script src="script.js"></script>
-</body>
+    <script>
+        function changeTab(tabId) {
+            const tabs = document.getElementsByClassName('tab');
+            
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function gerarMensagem() {
+            const nomeCliente = document.getElementById('nome_cliente').value;
+            const dataFesta = document.getElementById('data_festa').value;
+            const horarioInicio = document.getElementById('horario_inicio').value;
+            const horarioFim = document.getElementById('horario_fim').value;
+            
+            const mensagem = `Olá ${nomeCliente}!
+
+Esperamos que esteja tudo bem com você! 🎉 Aqui é a equipe do Bala Balão, e estamos super animados para informar que a festa do seu pequeno está chegando! 🎈
+
+Anote na sua agenda: ${dataFesta}, o grande dia! A diversão começará às ${horarioInicio} e o buffet já estará disponível para o aniversariante 15 minutos antes do horário combinado. O momento do parabéns está programado para acontecer entre 2 e 2,5 horas após o início da festa. O encerramento do evento está marcado para as ${horarioFim}. Caso necessário, você pode adiar término do evento mediante uma taxa para cada 30 minutos adicionais. Tenha certeza de que estamos trabalhando para que seja uma celebração inesquecível e repleta de alegria para família e convidados!
+
+Em relação às bebidas, caso você queira que o buffet sirva bebidas alcoólicas, pedimos gentilmente que nos entregue as bebidas em horário comercial (das 9hrs até 17hrs), com pelo menos 2 dias de antecedência, para garantir que tudo saia conforme o planejado. 🍾
+Dica: Reza a lenda que 3 latinhas por convidado são suficientes!
+
+A respeito de fotos e vídeos: Para que possamos exibi-los em nossas telas, é necessário que traga seu notebook com saída HDMI. Assim, faremos a conexão e garantiremos que seus momentos especiais sejam compartilhados com todos os convidados. 🎥✨
+
+Lembre-se de que a festa foi planejada com base no número de adultos e crianças do contrato. Portanto, se o número de convidados exceder o estipulado, será cobrado um valor adicional por pessoa. Se você tiver uma lista de convidados, por favor, entregue-a antes da festa para que possamos autorizar somente os convidados presentes na lista.
+
+Estamos ansiosos para fazer parte desse momento especial e torná-lo incrível! Caso tenha qualquer dúvida ou solicitação, por favor, não hesite em nos contatar.
+
+Até breve e nos vemos na festa! 🥳
+
+Atenciosamente,
+Equipe Bala Balão`;
+
+            document.getElementById('mensagem_textarea').value = mensagem;
+        }
+    </script>
+  </body>
 </html>
