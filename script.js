@@ -125,6 +125,13 @@ function copiarTexto() {
     document.execCommand('copy');
     alert('Texto copiado para a área de transferência');
 }
-document.getElementById('copiar').addEventListener('click', copiarTexto);
+function CopiarMensagem() {
+    const textArea = document.getElementById('mensagem_textarea');
+    textArea.select();
+    textArea.setSelectionRange(0, 99999); // Para dispositivos móveis
 
-    
+    document.execCommand('copy');
+    alert('Texto copiado para a área de transferência');
+}
+document.getElementById('copiar').addEventListener('click', copiarTexto);
+document.getElementById('CopiarMensagem').addEventListener('click', CopiarMensagem);
