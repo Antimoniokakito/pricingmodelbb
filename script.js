@@ -45,19 +45,19 @@ function calcularPrecos2023_1() {
     const Premier = 12 * 1225.9 + (adultoMin - 25) * 209.9 + (criancaMin - 10) * 82.9;
 
     const promocionais = [
-        ["*Formiguinha 1*", formiguinha1 / 12, formiguinha1 * (1 - 0.075)],
-        ["*Formiguinha 2*", formiguinha2 / 12, formiguinha2 * (1 - 0.075)],
-        ["*Formiguinha 3*", formiguinha3 / 12, formiguinha3 * (1 - 0.075)],
+        ["*Formiguinha 1*", formiguinha1 / 12, formiguinha1 * (1 - 0.1)],
+        ["*Formiguinha 2*", formiguinha2 / 12, formiguinha2 * (1 - 0.1)],
+        ["*Formiguinha 3*", formiguinha3 / 12, formiguinha3 * (1 - 0.1)],
     ];
 
     const tradicionais = [
-        ["*Formigueiro 1*", formigueiro1 / 12, formigueiro1 * (1 - 0.075)],
-        ["*Formigueiro 2*", formigueiro2 / 12, formigueiro2 * (1 - 0.075)],
-        ["*Formigueiro 3*", formigueiro3 / 12, formigueiro3 * (1 - 0.075)],
+        ["*Formigueiro 1*", formigueiro1 / 12, formigueiro1 * (1 - 0.1)],
+        ["*Formigueiro 2*", formigueiro2 / 12, formigueiro2 * (1 - 0.1)],
+        ["*Formigueiro 3*", formigueiro3 / 12, formigueiro3 * (1 - 0.1)],
     ];
     const premium = [
-    		["*Bala Balão*", BalaBalao / 12, BalaBalao * (1 - 0.075)],
-        ["*Premier*", Premier / 12, Premier * (1 - 0.075)],
+    		["*Bala Balão*", BalaBalao / 12, BalaBalao * (1 - 0.1)],
+        ["*Premier*", Premier / 12, Premier * (1 - 0.1)],
     ];
 
     document.getElementById('result').value = `Orçamento para ${adultos} Adultos e ${criancas} Criancas\n\n` +
@@ -93,19 +93,19 @@ function calcularPrecos2023_2() {
     const Premier = 12 * 1350.9 + (adultoMin - 25) * 229.9 + (criancaMin - 10) * 92.9;
 
     const promocionais = [
-        ["*Formiguinha 1*", formiguinha1 / 12, formiguinha1 * (1 - 0.075)],
-        ["*Formiguinha 2*", formiguinha2 / 12, formiguinha2 * (1 - 0.075)],
-        ["*Formiguinha 3*", formiguinha3 / 12, formiguinha3 * (1 - 0.075)],
+        ["*Formiguinha 1*", formiguinha1 / 12, formiguinha1 * (1 - 0.1)],
+        ["*Formiguinha 2*", formiguinha2 / 12, formiguinha2 * (1 - 0.1)],
+        ["*Formiguinha 3*", formiguinha3 / 12, formiguinha3 * (1 - 0.1)],
     ];
 
     const tradicionais = [
-        ["*Formigueiro 1*", formigueiro1 / 12, formigueiro1 * (1 - 0.075)],
-        ["*Formigueiro 2*", formigueiro2 / 12, formigueiro2 * (1 - 0.075)],
-        ["*Formigueiro 3*", formigueiro3 / 12, formigueiro3 * (1 - 0.075)],
+        ["*Formigueiro 1*", formigueiro1 / 12, formigueiro1 * (1 - 0.1)],
+        ["*Formigueiro 2*", formigueiro2 / 12, formigueiro2 * (1 - 0.1)],
+        ["*Formigueiro 3*", formigueiro3 / 12, formigueiro3 * (1 - 0.1)],
     ];
     const premium = [
-    		["*Bala Balão*", BalaBalao / 12, BalaBalao * (1 - 0.075)],
-        ["*Premier*", Premier / 12, Premier * (1 - 0.075)],
+    		["*Bala Balão*", BalaBalao / 12, BalaBalao * (1 - 0.1)],
+        ["*Premier*", Premier / 12, Premier * (1 - 0.1)],
     ];
 
     document.getElementById('result').value = `Orçamento para ${adultos} Adultos e ${criancas} Criancas\n\n` +
